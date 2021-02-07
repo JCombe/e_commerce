@@ -27,7 +27,7 @@ function App() {
 
         <Switch>
           <Route>
-            <Products />
+            <Products products={products} />
           </Route>
           <Route>
             <Cart />
