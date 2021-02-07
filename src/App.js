@@ -1,10 +1,25 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Navbar, Products, Cart } from './components';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <Router>
+        <Navbar />
 
-    </div>
+        <Switch>
+          <Route>
+            <Products />
+          </Route>
+          <Route>
+            <Cart />
+          </Route>
+        </Switch>
+
+
+      </Router>
+    </>
   );
 }
 
