@@ -10,11 +10,11 @@ function FormInput({ name, label, required }) {
     <Grid item xs={12} sm={6}>
       <Controller
         as={TextField}
-        name={name}
+        defaultValue=""
         control={control}
-        label={label}
         fullWidth
-        required={required}
+        name={name}
+        label={label}
         // error={isError}
       />
     </Grid>
