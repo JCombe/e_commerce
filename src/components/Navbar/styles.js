@@ -4,7 +4,7 @@ const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
     appBar: {
-        background: 'linear-gradient(45deg, #342E18 30%, #577A00 90%)',
+        background: 'linear-gradient(45deg, #3D3D3D 30%, #989898 90%)',
         boxShadow: 'none',
         borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
         [theme.breakpoints.up('sm')]: {

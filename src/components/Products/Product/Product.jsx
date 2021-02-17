@@ -5,9 +5,16 @@ import ProductInfo from "./ProductInfo/ProductInfo"
 
 import useStyles from './styles';
 
-const Product = ({ product, onAddToCart, setOpen, setProductComp }) => {
+const Product = ({ product, onAddToCart, setOpened, setProductComp }) => {
 
   const classes = useStyles();
+
+  const wrapperFunction = () => {
+
+    setProductComp(product)
+    setOpened(true)
+    
+}
 
   return (
   
@@ -22,10 +29,10 @@ const Product = ({ product, onAddToCart, setOpen, setProductComp }) => {
           </Typography>
         <Typography>Units/package: 500</Typography>
         <Typography>Price/unit: 0,15 €</Typography>
-        <Typography dangerouslySetInnerHTML={{ __html: product.description }} gutterBottom style={{fontSize: "10px"}} />
+        {/* <Typography dangerouslySetInnerHTML={{ __html: product.description }} gutterBottom style={{fontSize: "10px"}} /> */}
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
-        <IconButton aria-label="Info" onClick={() => setProductComp(product)}>
+        <IconButton aria-label="Info" onClick={() => wrapperFunction()}>
           <InfoRounded/>
         </IconButton>
         <IconButton aria-label="Add to Cart" onClick={() => onAddToCart(product.id, 1)}>
