@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { commerce } from "./lib/commerce.js"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Navbar, Products, Cart, Checkout } from './components';
+import { Navbar, Products, Cart, Checkout, About } from './components';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -13,7 +13,6 @@ const App = () => {
     const { data } = await commerce.products.list();
 
     setProducts(data);
-
   }
 
   const fetchCart = async () => {
@@ -67,8 +66,6 @@ const App = () => {
   }, []);
 
 
-  console.log(cart);
-
 
   return (
     <Router>
@@ -77,6 +74,9 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Products products={products} onAddToCart={handleAddToCart} />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
           <Route exact path="/cart">
             <Cart

@@ -12,7 +12,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
 
     const EmptyCart = () => (
         <Typography variant="subtitle1">Your cart is empty!
-        <Link to="/" className={classes.link}>Go Back to Products</Link>
+        <Link to="/" className={classes.link}> Go Back to Products</Link>
         </Typography>
     )
 

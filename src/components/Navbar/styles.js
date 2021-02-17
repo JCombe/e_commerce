@@ -4,6 +4,7 @@ const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
     appBar: {
+        background: 'linear-gradient(45deg, #342E18 30%, #577A00 90%)',
         boxShadow: 'none',
         borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
         [theme.breakpoints.up('sm')]: {
@@ -12,9 +13,15 @@ export default makeStyles((theme) => ({
         },
     },
     title: {
+        color: "white",
         flexGrow: 1,
         alignItems: 'center',
         display: 'flex',
+        textDecoration: 'none',
+    },
+    navLink: {
+        color: "white",
+        padding: "0px 15px",
         textDecoration: 'none',
     },
     image: {
